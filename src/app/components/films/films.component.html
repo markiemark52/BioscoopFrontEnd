@@ -1,0 +1,22 @@
+<h3>Add film:</h3>
+<app-filmform></app-filmform>
+
+<br/>
+<br/>
+
+<h3>Available films:</h3>
+<app-film *ngFor="let film of films" [film]="film">
+</app-film>
+
+
+<!-- <div *ngFor="let film of films">
+    {{film.name}}
+<app-film>
+    [name] = {{film.name}}
+</app-film>
+</div> -->
+
+<!-- <div *ngFor="let film of films">
+    <h2>{{film.name}}</h2>
+    description
+</div> -->

@@ -1,0 +1,15 @@
+<form #registerform="ngForm" (ngSubmit)="onSubmit(registerform)">
+    <div class="form-group">
+        <label for="emailInput">Email:</label>
+        <input type="email" [(ngModel)]="newUser.email" name="email" class="form-control" id="emailInput" placeholder="Email" required>
+    </div>
+    <div class="form-group">
+        <label for="passwordInput">Password:</label>
+        <input type="password" [(ngModel)]="newUser.password" name="password" class="form-control" id="passwordInput" placeholder="Password" required>
+    </div>
+    <div class="form-group">
+        <label for="passwordConfirmInput">Confirm password:</label>
+        <input type="password" [(ngModel)]="newUser.passwordConfirm" name="passwordConfirm" class="form-control" id="passwordConfirmInput" placeholder="Confirm password" required>
+    </div>
+    <button type="submit" class="btn btn-dark">Register</button>
+</form>

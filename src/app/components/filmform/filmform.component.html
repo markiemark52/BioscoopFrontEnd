@@ -1,0 +1,13 @@
+<form #filmform="ngForm" (ngSubmit)="onSubmit(filmform)">
+    <div class="form-group">
+        <label for="nameInput">Name:</label>
+        <input type="text" [(ngModel)]="newFilm.name" name="name" class="form-control" id="nameInput" placeholder="Name" required>
+    </div>
+    <div class="form-group">
+        <label for="descriptionInput">Description:</label>
+        <!-- <input type="text" [(ngModel)]="newFilm.description" name="description" class="form-control" id="descriptionInput" placeholder="Description" required> -->
+        <!-- <textarea [(ngModel)]="newFilm.description" name="description" class="form-control" id="descriptionInput" placeholder="Description" required></textarea> -->
+        <textarea name="description" class="form-control" id="descriptionInput" placeholder="Description" required></textarea>
+    </div>
+    <button type="submit" class="btn btn-dark">Add film</button>
+</form>
