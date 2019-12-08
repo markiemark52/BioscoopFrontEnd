@@ -1,0 +1,5 @@
+<div class="nav navbar-right" [ngSwitch]="loggedIn">
+    <app-navbar-logout *ngSwitchCase="true"></app-navbar-logout>
+
+    <app-navbar-login *ngSwitchDefault></app-navbar-login>
+</div>
