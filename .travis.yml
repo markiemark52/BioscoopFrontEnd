@@ -20,7 +20,7 @@ cache:
 script:
   #- ng lint
   #- ng test --watch=false
-  - ng build
+  - ng build --prod
   - cd ./dist/bioscoop
   - cp index.html 404.html
 
