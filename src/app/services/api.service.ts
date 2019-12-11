@@ -5,11 +5,11 @@ import { NewFilm } from '../models/newfilm.model';
 import { NewUser } from '../models/newuser.model';
 import { LoginUser } from '../models/loginuser.model';
 
-@NgModule({
-  declarations: [ ApiService ],
-  imports: [ HttpClient ],
-  exports: [ ApiService ]
-})
+// @NgModule({
+//   declarations: [ ApiService ],
+//   imports: [ HttpClient ],
+//   exports: [ ApiService ]
+// })
 
 @Injectable({
   providedIn: 'root'

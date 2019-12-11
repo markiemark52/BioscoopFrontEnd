@@ -11,7 +11,7 @@ import { ProfileGuard } from './guards/profile.guard';
 import { TokenInterceptor } from './token.interceptor';
 
 @NgModule({
-    declarations: [LoginComponent],
+    declarations: [/*LoginComponent*/],
     providers: [
         AuthGuard,
         AuthService,
