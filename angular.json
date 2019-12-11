@@ -30,6 +30,7 @@
           },
           "configurations": {
             "production": {
+              "baseHref": "https://markiemark52.github.io/BioscoopFrontEnd/",
               "fileReplacements": [
                 {
                   "replace": "src/environments/environment.ts",
