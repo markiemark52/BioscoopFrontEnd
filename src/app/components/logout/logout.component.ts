@@ -12,13 +12,8 @@ export class LogoutComponent implements OnInit {
   constructor(private router: Router, private authService: AuthService) { }
 
   ngOnInit() {
-    if (this.authService.logout()) {
-      console.log("yabbadabbadibdab")
-      console.log(!!this.authService.getJwtToken())
-      this.router.navigate(['/logout']);
-    }
-    else {
-      this.router.navigate['/']
-    }
+    this.authService.logout();
+    this.router.navigate(['/']);
+    this.router.navigate(['/logout']);
   }
 }

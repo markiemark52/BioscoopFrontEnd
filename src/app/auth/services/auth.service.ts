@@ -26,9 +26,12 @@ export class AuthService {
       )
   }
 
+  getEmail(): string {
+    return this.loggedUser;
+  }
+
   logout() {
     this.doLogoutUser();
-    return true;
     // return this.http.post<any>('http://localhost:9090/users/logout', {
     //   'refreshToken': this.getRefreshToken()
     // }).pipe(

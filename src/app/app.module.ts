@@ -16,7 +16,6 @@ import { LogoutComponent } from './components/logout/logout.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { NavbarLoginComponent } from './components/navbar-login/navbar-login.component';
 import { NavbarLogoutComponent } from './components/navbar-logout/navbar-logout.component';
-import { NavbarUserComponent } from './components/navbar-user/navbar-user.component';
 
 @NgModule({
   declarations: [
@@ -31,8 +30,7 @@ import { NavbarUserComponent } from './components/navbar-user/navbar-user.compon
     LogoutComponent,
     ProfileComponent,
     NavbarLoginComponent,
-    NavbarLogoutComponent,
-    NavbarUserComponent
+    NavbarLogoutComponent
   ],
   imports: [
     BrowserModule,

@@ -20,7 +20,10 @@
         </ul>
     </div>
 
-    <app-navbar-user></app-navbar-user>
+    <div class="nav navbar-right">
+        <app-navbar-logout *ngIf="loggedIn"></app-navbar-logout>
+        <app-navbar-login *ngIf="!loggedIn"></app-navbar-login>
+    </div>
 </nav>
 
 <div class="container">
