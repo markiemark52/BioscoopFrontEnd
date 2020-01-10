@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../../services/api.service';
 import { NewFilm } from '../../models/newfilm.model';
 import { Film } from '../../models/film.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-filmform',
@@ -13,7 +14,7 @@ export class FilmformComponent implements OnInit {
   newFilm: NewFilm = new NewFilm();
   filmResponse: NewFilm;
 
-  constructor(private apiService: ApiService) { }
+  constructor(private router: Router, private apiService: ApiService) { }
 
   ngOnInit() {
   }
@@ -27,7 +28,9 @@ export class FilmformComponent implements OnInit {
         this.filmResponse = new Film().deserialize(data);
         console.log(this.filmResponse.name);
 
-        document.location.href = "http://localhost:4200/films";
+        alert(`Film "${this.filmResponse.name}" submitted successfully!`);
+
+        this.router.navigate(['/']);
       })
     }
   }

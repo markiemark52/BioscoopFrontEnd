@@ -8,7 +8,6 @@ import { AppComponent } from './app.component';
 import { FilmsComponent } from './components/films/films.component';
 import { FilmComponent } from './components/film/film.component';
 import { HomeComponent } from './components/home/home.component';
-import { AboutComponent } from './components/about/about.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { FilmformComponent } from './components/filmform/filmform.component';
@@ -23,7 +22,6 @@ import { NavbarLogoutComponent } from './components/navbar-logout/navbar-logout.
     FilmsComponent,
     FilmComponent,
     HomeComponent,
-    AboutComponent,
     LoginComponent,
     RegisterComponent,
     FilmformComponent,
