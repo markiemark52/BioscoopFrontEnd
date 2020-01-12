@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { ApiService } from '../../services/api.service';
 import { NewUser } from '../../models/newuser.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -12,7 +13,7 @@ export class RegisterComponent implements OnInit {
   newUser: NewUser = new NewUser();
   registerResponse: NewUser = new NewUser();
 
-  constructor(private apiService: ApiService) { }
+  constructor(private router: Router, private apiService: ApiService) { }
 
   ngOnInit() {
   }
@@ -25,7 +26,7 @@ export class RegisterComponent implements OnInit {
       this.apiService.register(this.newUser).subscribe((data) => {
         this.registerResponse = new NewUser().deserialize(data);
         console.log(this.registerResponse);
-        document.location.href = "http://localhost:4200/login";
+        this.router.navigate(['/login']);
       });
     }
   }

@@ -1,3 +1,8 @@
 <h2>{{email}}</h2>
 <br/>
 <p>Welcome to your profile!</p>
+<br/>
+<br/>
+<h3>Films submitted by you:</h3>
+<app-film *ngFor="let film of films" [film]="film">
+</app-film>

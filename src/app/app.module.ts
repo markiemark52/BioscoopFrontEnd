@@ -1,14 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FilmsComponent } from './components/films/films.component';
 import { FilmComponent } from './components/film/film.component';
 import { HomeComponent } from './components/home/home.component';
-import { AboutComponent } from './components/about/about.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { FilmformComponent } from './components/filmform/filmform.component';
@@ -23,7 +22,6 @@ import { NavbarLogoutComponent } from './components/navbar-logout/navbar-logout.
     FilmsComponent,
     FilmComponent,
     HomeComponent,
-    AboutComponent,
     LoginComponent,
     RegisterComponent,
     FilmformComponent,
@@ -36,7 +34,8 @@ import { NavbarLogoutComponent } from './components/navbar-logout/navbar-logout.
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

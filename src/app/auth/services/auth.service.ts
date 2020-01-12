@@ -27,7 +27,7 @@ export class AuthService {
   }
 
   getEmail(): string {
-    return this.loggedUser;
+    return this.getJwtToken();
   }
 
   logout() {
@@ -64,6 +64,7 @@ export class AuthService {
   private doLoginUser(username: string, tokens: Tokens) {
     this.loggedUser = username;
     this.storeTokens(tokens);
+    console.log(username);
   }
 
   private doLogoutUser() {
@@ -80,7 +81,8 @@ export class AuthService {
   }
 
   private storeTokens(tokens: Tokens) {
-    localStorage.setItem(this.JWT_TOKEN, tokens.jwt);
+    //localStorage.setItem(this.JWT_TOKEN, tokens.jwt);
+    localStorage.setItem(this.JWT_TOKEN, this.loggedUser);
     localStorage.setItem(this.REFRESH_TOKEN, tokens.refreshToken);
   }
 

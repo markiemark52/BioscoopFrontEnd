@@ -1,8 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { ApiService } from '../../services/api.service';
 import { NewFilm } from '../../models/newfilm.model';
 import { Film } from '../../models/film.model';
+import { Router } from '@angular/router';
+import { AuthService } from 'src/app/auth/services/auth.service';
+
+@NgModule ({
+  imports: [ FormsModule, ReactiveFormsModule ]
+})
 
 @Component({
   selector: 'app-filmform',
@@ -13,9 +20,10 @@ export class FilmformComponent implements OnInit {
   newFilm: NewFilm = new NewFilm();
   filmResponse: NewFilm;
 
-  constructor(private apiService: ApiService) { }
+  constructor(private router: Router, private apiService: ApiService, private authService: AuthService) { }
 
   ngOnInit() {
+    this.newFilm.email = this.authService.getEmail();
   }
 
   onSubmit(filmform) {
@@ -27,7 +35,9 @@ export class FilmformComponent implements OnInit {
         this.filmResponse = new Film().deserialize(data);
         console.log(this.filmResponse.name);
 
-        document.location.href = "http://localhost:4200/films";
+        alert(`Film "${this.filmResponse.name}" submitted successfully!`);
+
+        this.router.navigate(['/']);
       })
     }
   }

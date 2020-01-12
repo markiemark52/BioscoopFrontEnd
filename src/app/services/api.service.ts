@@ -23,7 +23,11 @@ export class ApiService {
   }
 
   public getFilms() {
-    return this.httpClient.get('http://localhost:9090/films/getall');
+    return this.httpClient.get('http://localhost:9090/films/all');
+  }
+
+  public getFilmsByEmail(email: string) {
+    return this.httpClient.get(`http://localhost:9090/films?email=${email}`);
   }
 
   public register(newUser: NewUser) {
