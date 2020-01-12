@@ -1,0 +1,6 @@
+.film-layout {
+    display: grid;
+    grid-template-columns: 250px 250px 250px 250px 250px;
+    grid-template-rows: 150px 150px 150px 150px 150px;
+    /* flex grid */
+}

@@ -20,6 +20,7 @@ export class HomeComponent implements OnInit {
       
       this.dataArray.forEach(film => {
         this.films.push(new Film().deserialize(film));
+        console.log(film);
       });
     })
 
