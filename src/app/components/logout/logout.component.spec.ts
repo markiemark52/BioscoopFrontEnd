@@ -3,6 +3,10 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { LogoutComponent } from './logout.component';
 
 describe('LogoutComponent', () => {
+  it('Placeholder', () => {
+    expect(true).toBeTruthy();
+  })
+  
   // let component: LogoutComponent;
   // let fixture: ComponentFixture<LogoutComponent>;
 
@@ -22,7 +26,4 @@ describe('LogoutComponent', () => {
   // it('should create', () => {
   //   expect(component).toBeTruthy();
   // });
-  it('test', () => {
-    expect(true);
-  })
 });

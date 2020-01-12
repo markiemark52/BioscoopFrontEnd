@@ -3,6 +3,31 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { HomeComponent } from './home.component';
 
 describe('HomeComponent', () => {
+  it('Placeholder', () => {
+    expect(true).toBeTruthy();
+  })
+
+//   let component: HomeComponent;
+//   let fixture: ComponentFixture<HomeComponent>;
+
+// beforeEach(async(() => {
+//   TestBed.configureTestingModule({
+//     imports: [],
+//     declarations: [ HomeComponent ]
+//   }).compileComponents().then(() => {
+//     fixture = TestBed.createComponent(HomeComponent);
+//     component = fixture.componentInstance;
+//     component.ngOnInit();
+//   });
+// }));
+
+// it('Films array empty on initiation', () => {
+//   expect(component.films.length == 0);
+// })
+
+
+// ----------------------------------------------------------------
+
   // let component: HomeComponent;
   // let fixture: ComponentFixture<HomeComponent>;
 
@@ -22,7 +47,4 @@ describe('HomeComponent', () => {
   // it('should create', () => {
   //   expect(component).toBeTruthy();
   // });
-  it('test', () => {
-    expect(true);
-  })
 });

@@ -1,10 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { ApiService } from '../../services/api.service';
 import { NewFilm } from '../../models/newfilm.model';
 import { Film } from '../../models/film.model';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/auth/services/auth.service';
+
+@NgModule ({
+  imports: [ FormsModule, ReactiveFormsModule ]
+})
 
 @Component({
   selector: 'app-filmform',

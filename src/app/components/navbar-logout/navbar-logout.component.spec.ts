@@ -3,6 +3,10 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { NavbarLogoutComponent } from './navbar-logout.component';
 
 describe('NavbarLogoutComponent', () => {
+  it('Placeholder', () => {
+    expect(true).toBeTruthy();
+  })
+
   // let component: NavbarLogoutComponent;
   // let fixture: ComponentFixture<NavbarLogoutComponent>;
 
@@ -22,7 +26,4 @@ describe('NavbarLogoutComponent', () => {
   // it('should create', () => {
   //   expect(component).toBeTruthy();
   // });
-  it('test', () => {
-    expect(true);
-  })
 });
