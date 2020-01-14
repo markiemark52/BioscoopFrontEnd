@@ -33,9 +33,9 @@ export class FilmformComponent implements OnInit {
       
       this.apiService.addFilm(this.newFilm).subscribe((data) => {
         this.filmResponse = new Film().deserialize(data);
-        console.log(this.filmResponse.name);
+        console.log(this.filmResponse.title);
 
-        alert(`Film "${this.filmResponse.name}" submitted successfully!`);
+        alert(`Film "${this.filmResponse.title}" submitted successfully!`);
 
         this.router.navigate(['/']);
       })

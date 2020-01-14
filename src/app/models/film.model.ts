@@ -2,7 +2,7 @@ import { Deserializable } from './deserializable.model';
 
 export class Film implements Deserializable {
     id: number;
-    name: string;
+    title: string;
     description: string;
     email: string;
 

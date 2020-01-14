@@ -1,7 +1,7 @@
 import { Deserializable } from './deserializable.model';
 
 export class NewFilm implements Deserializable {
-    name: string;
+    title: string;
     description: string;
     email: string;
 
