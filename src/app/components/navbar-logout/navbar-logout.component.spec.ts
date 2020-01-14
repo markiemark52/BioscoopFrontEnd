@@ -1,29 +1,21 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, TestBed } from '@angular/core/testing';
 
 import { NavbarLogoutComponent } from './navbar-logout.component';
+import { HttpClient, HttpHandler } from '@angular/common/http';
 
 describe('NavbarLogoutComponent', () => {
-  it('Placeholder', () => {
-    expect(true).toBeTruthy();
-  })
+  let navbarLogoutComponent: NavbarLogoutComponent;
 
-  // let component: NavbarLogoutComponent;
-  // let fixture: ComponentFixture<NavbarLogoutComponent>;
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      providers: [ NavbarLogoutComponent, HttpClient, HttpHandler ]
+    })
+    .compileComponents();
 
-  // beforeEach(async(() => {
-  //   TestBed.configureTestingModule({
-  //     declarations: [ NavbarLogoutComponent ]
-  //   })
-  //   .compileComponents();
-  // }));
+    navbarLogoutComponent = TestBed.get(NavbarLogoutComponent);
+  }));
 
-  // beforeEach(() => {
-  //   fixture = TestBed.createComponent(NavbarLogoutComponent);
-  //   component = fixture.componentInstance;
-  //   fixture.detectChanges();
-  // });
-
-  // it('should create', () => {
-  //   expect(component).toBeTruthy();
-  // });
+  it('should create', () => {
+    expect(navbarLogoutComponent).toBeTruthy();
+  });
 });

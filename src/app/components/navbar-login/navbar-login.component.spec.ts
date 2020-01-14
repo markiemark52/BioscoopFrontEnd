@@ -1,29 +1,21 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, TestBed } from '@angular/core/testing';
 
 import { NavbarLoginComponent } from './navbar-login.component';
+import { HttpClient, HttpHandler } from '@angular/common/http';
 
 describe('NavbarLoginComponent', () => {
-  it('Placeholder', () => {
-    expect(true).toBeTruthy();
-  })
+  let navbarLoginComponent: NavbarLoginComponent;
 
-  // let component: NavbarLoginComponent;
-  // let fixture: ComponentFixture<NavbarLoginComponent>;
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      providers: [ NavbarLoginComponent, HttpClient, HttpHandler ]
+    })
+    .compileComponents();
 
-  // beforeEach(async(() => {
-  //   TestBed.configureTestingModule({
-  //     declarations: [ NavbarLoginComponent ]
-  //   })
-  //   .compileComponents();
-  // }));
+    navbarLoginComponent = TestBed.get(NavbarLoginComponent);
+  }));
 
-  // beforeEach(() => {
-  //   fixture = TestBed.createComponent(NavbarLoginComponent);
-  //   component = fixture.componentInstance;
-  //   fixture.detectChanges();
-  // });
-
-  // it('should create', () => {
-  //   expect(component).toBeTruthy();
-  // });
+  it('should create', () => {
+    expect(navbarLoginComponent).toBeTruthy();
+  });
 });

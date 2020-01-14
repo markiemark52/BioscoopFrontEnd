@@ -1,16 +1,21 @@
 import { TestBed } from '@angular/core/testing';
 
 import { AuthService } from './auth.service';
+import { HttpClient, HttpHandler } from '@angular/common/http';
 
 describe('AuthService', () => {
-  it('Placeholder', () => {
-    expect(true).toBeTruthy();
-  })
-  
-  // beforeEach(() => TestBed.configureTestingModule({}));
+  let authService: AuthService;
 
-  // it('should be created', () => {
-  //   const service: AuthService = TestBed.get(AuthService);
-  //   expect(service).toBeTruthy();
-  // });
+  beforeEach(() => {
+    TestBed.configureTestingModule({
+      providers: [ AuthService, HttpClient, HttpHandler ]
+    })
+    .compileComponents();
+
+    authService = TestBed.get(AuthService);
+  });
+
+  it('should create', () => {
+    expect(authService).toBeTruthy();
+  });
 });

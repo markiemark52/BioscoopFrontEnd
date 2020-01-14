@@ -1,29 +1,21 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, TestBed } from '@angular/core/testing';
 
 import { FilmsComponent } from './films.component';
+import { HttpClient, HttpHandler } from '@angular/common/http';
 
 describe('FilmsComponent', () => {
-  it('Placeholder', () => {
-    expect(true).toBeTruthy();
-  })
-  
-  // let component: FilmsComponent;
-  // let fixture: ComponentFixture<FilmsComponent>;
+  let filmsComponent: FilmsComponent;
 
-  // beforeEach(async(() => {
-  //   TestBed.configureTestingModule({
-  //     declarations: [ FilmsComponent ]
-  //   })
-  //   .compileComponents();
-  // }));
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      providers: [ FilmsComponent, HttpClient, HttpHandler ],
+    })
+    .compileComponents();
 
-  // beforeEach(() => {
-  //   fixture = TestBed.createComponent(FilmsComponent);
-  //   component = fixture.componentInstance;
-  //   fixture.detectChanges();
-  // });
+    filmsComponent = TestBed.get(FilmsComponent);
+  }));
 
-  // it('should create', () => {
-  //   expect(component).toBeTruthy();
-  // });
+  it('should create', () => {
+    expect(filmsComponent).toBeTruthy();
+  });
 });

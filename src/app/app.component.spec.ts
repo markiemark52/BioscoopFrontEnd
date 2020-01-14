@@ -1,39 +1,22 @@
 import { TestBed, async } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
+import { HttpClient, HttpHandler } from '@angular/common/http';
 
 describe('AppComponent', () => {
-  it('Placeholder', () => {
-    expect(true).toBeTruthy();
-  })
-  
-  // beforeEach(async(() => {
-  //   TestBed.configureTestingModule({
-  //     imports: [
-  //       RouterTestingModule
-  //     ],
-  //     declarations: [
-  //       AppComponent
-  //     ],
-  //   }).compileComponents();
-  // }));
+  let appComponent: AppComponent;
 
-  // it('should create the app', () => {
-  //   const fixture = TestBed.createComponent(AppComponent);
-  //   const app = fixture.debugElement.componentInstance;
-  //   expect(app).toBeTruthy();
-  // });
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      providers: [ AppComponent, HttpClient, HttpHandler ],
+      imports: [ RouterTestingModule ]
+    })
+    .compileComponents();
 
-  // it(`should have as title 'bioscoop'`, () => {
-  //   const fixture = TestBed.createComponent(AppComponent);
-  //   const app = fixture.debugElement.componentInstance;
-  //   expect(app.title).toEqual('bioscoop');
-  // });
+    appComponent = TestBed.get(AppComponent);
+  }));
 
-  // it('should render title', () => {
-  //   const fixture = TestBed.createComponent(AppComponent);
-  //   fixture.detectChanges();
-  //   const compiled = fixture.debugElement.nativeElement;
-  //   expect(compiled.querySelector('.content span').textContent).toContain('bioscoop app is running!');
-  // });
+  it('should create', () => {
+    expect(appComponent).toBeTruthy();
+  });
 });

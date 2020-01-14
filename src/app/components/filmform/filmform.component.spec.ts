@@ -1,55 +1,23 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, TestBed } from '@angular/core/testing';
 
 import { FilmformComponent } from './filmform.component';
+import { HttpClient, HttpHandler } from '@angular/common/http';
+import { RouterTestingModule } from '@angular/router/testing';
 
 describe('FilmformComponent', () => {
-  it('Placeholder', () => {
-    expect(true).toBeTruthy();
-  })
+  let filmformComponent: FilmformComponent;
 
-//   let component: FilmformComponent;
-//   let fixture: ComponentFixture<FilmformComponent>;
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      providers: [ FilmformComponent, HttpClient, HttpHandler ],
+      imports: [ RouterTestingModule ]
+    })
+    .compileComponents();
 
-// beforeEach(async(() => {
-//   TestBed.configureTestingModule({
-//     imports: [],
-//     declarations: [ FilmformComponent ]
-//   }).compileComponents().then(() => {
-//     fixture = TestBed.createComponent(FilmformComponent);
-//     component = fixture.componentInstance;
-//     component.ngOnInit();
-//   });
-// }));
+    filmformComponent = TestBed.get(FilmformComponent);
+  }));
 
-// it('Film name empty on startup', () => {
-//   expect(component.newFilm.name == null);
-// })
-
-// it('Film description empty on startup', () => {
-//   expect(component.newFilm.description == null);
-// })
-
-
-// ----------------------------------------------------------------
-
-  
-  // let component: FilmformComponent;
-  // let fixture: ComponentFixture<FilmformComponent>;
-
-  // beforeEach(async(() => {
-  //   TestBed.configureTestingModule({
-  //     declarations: [ FilmformComponent ]
-  //   })
-  //   .compileComponents();
-  // }));
-
-  // beforeEach(() => {
-  //   fixture = TestBed.createComponent(FilmformComponent);
-  //   component = fixture.componentInstance;
-  //   fixture.detectChanges();
-  // });
-
-  // it('should create', () => {
-  //   expect(component).toBeTruthy();
-  // });
+  it('should create', () => {
+    expect(filmformComponent).toBeTruthy();
+  });
 });

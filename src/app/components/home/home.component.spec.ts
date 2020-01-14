@@ -1,50 +1,21 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, TestBed } from '@angular/core/testing';
 
 import { HomeComponent } from './home.component';
+import { HttpClient, HttpHandler } from '@angular/common/http';
 
 describe('HomeComponent', () => {
-  it('Placeholder', () => {
-    expect(true).toBeTruthy();
-  })
+  let homeComponent: HomeComponent;
 
-//   let component: HomeComponent;
-//   let fixture: ComponentFixture<HomeComponent>;
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      providers: [ HomeComponent, HttpClient, HttpHandler ]
+    })
+    .compileComponents();
 
-// beforeEach(async(() => {
-//   TestBed.configureTestingModule({
-//     imports: [],
-//     declarations: [ HomeComponent ]
-//   }).compileComponents().then(() => {
-//     fixture = TestBed.createComponent(HomeComponent);
-//     component = fixture.componentInstance;
-//     component.ngOnInit();
-//   });
-// }));
+    homeComponent = TestBed.get(HomeComponent);
+  }));
 
-// it('Films array empty on initiation', () => {
-//   expect(component.films.length == 0);
-// })
-
-
-// ----------------------------------------------------------------
-
-  // let component: HomeComponent;
-  // let fixture: ComponentFixture<HomeComponent>;
-
-  // beforeEach(async(() => {
-  //   TestBed.configureTestingModule({
-  //     declarations: [ HomeComponent ]
-  //   })
-  //   .compileComponents();
-  // }));
-
-  // beforeEach(() => {
-  //   fixture = TestBed.createComponent(HomeComponent);
-  //   component = fixture.componentInstance;
-  //   fixture.detectChanges();
-  // });
-
-  // it('should create', () => {
-  //   expect(component).toBeTruthy();
-  // });
+  it('should create', () => {
+    expect(homeComponent).toBeTruthy();
+  });
 });
