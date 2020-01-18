@@ -4,6 +4,7 @@ import { ApiService } from '../../services/api.service';
 import { LoginUser } from '../../models/loginuser.model';
 import { AuthService } from 'src/app/auth/services/auth.service';
 import { Router } from '@angular/router';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -13,15 +14,21 @@ import { Router } from '@angular/router';
 export class LoginComponent implements OnInit {
   loginUser: LoginUser = new LoginUser();
   loginResponse: LoginUser = new LoginUser();
+  
+  loginForm: FormGroup;
 
-  constructor(private apiService: ApiService, private authService: AuthService, private router: Router) { }
+  constructor(private apiService: ApiService, private authService: AuthService, private router: Router, private formBuilder: FormBuilder) { }
 
   ngOnInit() {
+    this.loginForm = this.formBuilder.group({
+      email: ['', [ Validators.required, Validators.minLength(5)]],
+      password: ['', [ Validators.required, Validators.minLength(5)]]
+    });
   }
 
-  login(loginform) {
+  login() {
     this.authService.login({
-      username: this.loginUser.email,
+      email: this.loginUser.email,
       password: this.loginUser.password
     })
     .subscribe(success => {

@@ -18,4 +18,13 @@ describe('AuthService', () => {
   it('should create', () => {
     expect(authService).toBeTruthy();
   });
+
+  it('JwtToken null when user is not logged in', () => {
+    if(authService.isLoggedIn()) {
+      expect(authService.getJwtToken() != null).toBeTruthy();
+    }
+    else {
+      expect(authService.getJwtToken() == null).toBeTruthy();
+    }
+  });
 });

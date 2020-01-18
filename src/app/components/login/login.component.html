@@ -1,5 +1,5 @@
 <!-- <form #loginform="ngForm" (ngSubmit)="onSubmit(loginform)"> -->
-<form #loginform="ngForm" (ngSubmit)="login(loginform)">
+<form #loginForm="ngForm" (ngSubmit)="login()">
     <div class="form-group">
         <label for="emailInput">Email:</label>
         <input type="email" [(ngModel)]="loginUser.email" name="email" class="form-control" id="emailInput" placeholder="Email" required>

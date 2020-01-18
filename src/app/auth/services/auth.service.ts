@@ -14,10 +14,10 @@ export class AuthService {
 
   constructor(private http: HttpClient) { }
 
-  login(user: { username: string, password: string }): Observable<boolean> {
+  login(user: { email: string, password: string }): Observable<boolean> {
     return this.http.post<any>('http://localhost:9090/users/login', user)
       .pipe(
-        tap(tokens => this.doLoginUser(user.username, tokens)),
+        tap(tokens => this.doLoginUser(user.email, tokens)),
         mapTo(true),
         catchError(error => {
           alert(error.error);

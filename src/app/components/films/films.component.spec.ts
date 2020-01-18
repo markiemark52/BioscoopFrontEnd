@@ -8,7 +8,7 @@ describe('FilmsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      providers: [ FilmsComponent, HttpClient, HttpHandler ],
+      providers: [ FilmsComponent, HttpClient, HttpHandler ]
     })
     .compileComponents();
 
