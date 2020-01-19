@@ -1,7 +1,7 @@
 import { TestBed, async } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
-import { HttpClient, HttpHandler } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { NO_ERRORS_SCHEMA } from '@angular/core';
 
 describe('AppComponent', () => {
@@ -9,8 +9,8 @@ describe('AppComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      providers: [ AppComponent, HttpClient, HttpHandler ],
-      imports: [ RouterTestingModule ],
+      providers: [ AppComponent ],
+      imports: [ RouterTestingModule, HttpClientModule ],
       declarations: [ AppComponent ],
       schemas: [ NO_ERRORS_SCHEMA ]
     })
