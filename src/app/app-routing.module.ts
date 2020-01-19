@@ -9,6 +9,7 @@ import { LogoutComponent } from './components/logout/logout.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { AuthGuard } from './auth/guards/auth.guard';
 import { ProfileGuard } from './auth/guards/profile.guard';
+import { ManageComponent } from './components/manage/manage.component';
 
 
 const routes: Routes = [
@@ -17,7 +18,8 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent},// canActivate: [AuthGuard] },
   { path: 'register', component: RegisterComponent },
   { path: 'logout', component: LogoutComponent },
-  { path: 'profile', component: ProfileComponent, canActivate: [ProfileGuard], canLoad: [ProfileGuard] }
+  { path: 'profile', component: ProfileComponent, canActivate: [ProfileGuard], canLoad: [ProfileGuard] },
+  { path: 'manage', component: ManageComponent }
 ];
 
 @NgModule({

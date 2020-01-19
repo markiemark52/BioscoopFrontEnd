@@ -1,0 +1,23 @@
+<h3>Manage Films & Auditoriums</h3>
+<br/>
+<br/>
+<br/>
+<form #manageForm="ngForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label for="filmInput">Film:</label>
+        <select [(ngModel)]="filmTitle" name="film" class="form-control" id="filmInput" required>
+            <option *ngFor="let film of films" [ngValue]="film.title">{{film.title}}</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="auditoriumInput">Auditorium:</label>
+        <select [(ngModel)]="auditoriumName" name="auditorium" class="form-control" id="auditoriumInput" required>
+            <option *ngFor="let auditorium of auditoriums" [ngValue]="auditorium.name">{{auditorium.name}}</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="datetimeInput">Date & time:</label>
+        <input type="datetime" [(ngModel)]="datetime" name="datetime" class="form-control" id="datetimeInput" required>
+    </div>
+    <button type="submit" class="btn btn-dark">Submit</button>
+</form>

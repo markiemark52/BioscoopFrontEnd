@@ -15,6 +15,7 @@ import { LogoutComponent } from './components/logout/logout.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { NavbarLoginComponent } from './components/navbar-login/navbar-login.component';
 import { NavbarLogoutComponent } from './components/navbar-logout/navbar-logout.component';
+import { ManageComponent } from './components/manage/manage.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { NavbarLogoutComponent } from './components/navbar-logout/navbar-logout.
     LogoutComponent,
     ProfileComponent,
     NavbarLoginComponent,
-    NavbarLogoutComponent
+    NavbarLogoutComponent,
+    ManageComponent
   ],
   imports: [
     BrowserModule,
