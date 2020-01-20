@@ -10,6 +10,7 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { AuthGuard } from './auth/guards/auth.guard';
 import { ProfileGuard } from './auth/guards/profile.guard';
 import { ManageComponent } from './components/manage/manage.component';
+import { FilmDetailsComponent } from './components/film-details/film-details.component';
 
 
 const routes: Routes = [
@@ -19,7 +20,8 @@ const routes: Routes = [
   { path: 'register', component: RegisterComponent },
   { path: 'logout', component: LogoutComponent },
   { path: 'profile', component: ProfileComponent, canActivate: [ProfileGuard], canLoad: [ProfileGuard] },
-  { path: 'manage', component: ManageComponent }
+  { path: 'manage', component: ManageComponent },
+  { path: 'film-details/:id', component: FilmDetailsComponent }
 ];
 
 @NgModule({

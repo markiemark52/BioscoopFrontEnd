@@ -16,6 +16,8 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { NavbarLoginComponent } from './components/navbar-login/navbar-login.component';
 import { NavbarLogoutComponent } from './components/navbar-logout/navbar-logout.component';
 import { ManageComponent } from './components/manage/manage.component';
+import { FilmDetailsComponent } from './components/film-details/film-details.component';
+import { ShowtimeComponent } from './components/showtime/showtime.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { ManageComponent } from './components/manage/manage.component';
     ProfileComponent,
     NavbarLoginComponent,
     NavbarLogoutComponent,
-    ManageComponent
+    ManageComponent,
+    FilmDetailsComponent,
+    ShowtimeComponent
   ],
   imports: [
     BrowserModule,

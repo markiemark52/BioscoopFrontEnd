@@ -1,22 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ManageComponent } from './manage.component';
-import { NO_ERRORS_SCHEMA } from '@angular/core';
+import { ShowtimeComponent } from './showtime.component';
 
-describe('ManageComponent', () => {
-  let component: ManageComponent;
-  let fixture: ComponentFixture<ManageComponent>;
+describe('ShowtimeComponent', () => {
+  let component: ShowtimeComponent;
+  let fixture: ComponentFixture<ShowtimeComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ManageComponent ],
-      schemas: [ NO_ERRORS_SCHEMA ]
+      declarations: [ ShowtimeComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ManageComponent);
+    fixture = TestBed.createComponent(ShowtimeComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

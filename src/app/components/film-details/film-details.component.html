@@ -1,0 +1,7 @@
+<div *ngFor="let film of films">
+    <h3>{{film.title}}</h3>
+    <p>{{film.description}}</p>
+    <br/>
+    <h5>Showtimes:</h5>
+    <app-showtime *ngFor="let showtime of showtimes" [showtime]="showtime"></app-showtime>
+</div>

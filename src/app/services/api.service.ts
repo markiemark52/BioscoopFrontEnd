@@ -48,4 +48,12 @@ export class ApiService {
     const params = new HttpParams().set("filmTitle", filmTitle).set("auditoriumName", auditoriumName).set("datetime", datetime);
     return this.httpClient.get('http://localhost:9090/auditoriums/manage', {params});
   }
+
+  public getFilmById(id: number) {
+    return this.httpClient.get(`http://localhost:9090/films/id?id=${id}`);
+  }
+
+  public getShowtimesByFilmId(filmId: number) {
+    return this.httpClient.get(`http://localhost:9090/auditoriums/showtimes?filmId=${filmId}`);
+  }
 }
