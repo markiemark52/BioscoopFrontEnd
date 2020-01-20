@@ -1,0 +1,7 @@
+<div *ngFor="let auditorium of auditoriums">
+    <h3>{{auditorium.name}}</h3>
+    <p>{{auditorium.description}}</p>
+    <br/>
+    <h5>Showtimes:</h5>
+    <app-ashowtime *ngFor="let showtime of showtimes" [showtime]="showtime"></app-ashowtime>
+</div>

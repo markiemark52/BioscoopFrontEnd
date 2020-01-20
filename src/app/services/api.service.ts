@@ -56,4 +56,12 @@ export class ApiService {
   public getShowtimesByFilmId(filmId: number) {
     return this.httpClient.get(`http://localhost:9090/auditoriums/showtimes?filmId=${filmId}`);
   }
+
+  public getShowtimesByAuditoriumId(auditoriumId: number) {
+    return this.httpClient.get(`http://localhost:9090/auditoriums/ashowtimes?auditoriumId=${auditoriumId}`);
+  }
+
+  public getAuditoriumById(id: number) {
+    return this.httpClient.get(`http://localhost:9090/auditoriums/id?id=${id}`);
+  }
 }

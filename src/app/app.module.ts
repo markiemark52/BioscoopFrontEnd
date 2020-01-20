@@ -18,6 +18,10 @@ import { NavbarLogoutComponent } from './components/navbar-logout/navbar-logout.
 import { ManageComponent } from './components/manage/manage.component';
 import { FilmDetailsComponent } from './components/film-details/film-details.component';
 import { ShowtimeComponent } from './components/showtime/showtime.component';
+import { AuditoriumDetailsComponent } from './components/auditorium-details/auditorium-details.component';
+import { AuditoriumComponent } from './components/auditorium/auditorium.component';
+import { AuditoriumsComponent } from './components/auditoriums/auditoriums.component';
+import { AshowtimeComponent } from './components/ashowtime/ashowtime.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +38,11 @@ import { ShowtimeComponent } from './components/showtime/showtime.component';
     NavbarLogoutComponent,
     ManageComponent,
     FilmDetailsComponent,
-    ShowtimeComponent
+    ShowtimeComponent,
+    AuditoriumDetailsComponent,
+    AuditoriumComponent,
+    AuditoriumsComponent,
+    AshowtimeComponent
   ],
   imports: [
     BrowserModule,

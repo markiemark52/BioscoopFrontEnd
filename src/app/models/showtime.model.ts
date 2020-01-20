@@ -1,6 +1,7 @@
 import { Deserializable } from './deserializable.model';
 
 export class Showtime implements Deserializable {
+    film: string;
     auditorium: string;
     datetime: string;
 

@@ -30,6 +30,7 @@ export class FilmformComponent implements OnInit {
     if (filmform.valid) {
       console.log("Film submitted");
       console.log(this.newFilm);
+      console.log("title="+this.newFilm.title);
       
       this.apiService.addFilm(this.newFilm).subscribe((data) => {
         this.filmResponse = new Film().deserialize(data);
