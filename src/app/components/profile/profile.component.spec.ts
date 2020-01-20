@@ -3,6 +3,7 @@ import { async, TestBed } from '@angular/core/testing';
 import { ProfileComponent } from './profile.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FilmComponent } from '../film/film.component';
+import { NO_ERRORS_SCHEMA } from '@angular/core';
 
 describe('ProfileComponent', () => {
   let profileComponent: ProfileComponent;
@@ -11,7 +12,8 @@ describe('ProfileComponent', () => {
     TestBed.configureTestingModule({
       imports: [ HttpClientModule ],
       providers: [ ProfileComponent ],
-      declarations: [ ProfileComponent, FilmComponent ]
+      declarations: [ ProfileComponent, FilmComponent ],
+      schemas: [ NO_ERRORS_SCHEMA ]
     })
     .compileComponents();
 

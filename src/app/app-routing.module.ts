@@ -9,6 +9,10 @@ import { LogoutComponent } from './components/logout/logout.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { AuthGuard } from './auth/guards/auth.guard';
 import { ProfileGuard } from './auth/guards/profile.guard';
+import { ManageComponent } from './components/manage/manage.component';
+import { FilmDetailsComponent } from './components/film-details/film-details.component';
+import { AuditoriumDetailsComponent } from './components/auditorium-details/auditorium-details.component';
+import { AuditoriumsComponent } from './components/auditoriums/auditoriums.component';
 
 
 const routes: Routes = [
@@ -17,7 +21,11 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent},// canActivate: [AuthGuard] },
   { path: 'register', component: RegisterComponent },
   { path: 'logout', component: LogoutComponent },
-  { path: 'profile', component: ProfileComponent, canActivate: [ProfileGuard], canLoad: [ProfileGuard] }
+  { path: 'profile', component: ProfileComponent, canActivate: [ProfileGuard], canLoad: [ProfileGuard] },
+  { path: 'manage', component: ManageComponent },
+  { path: 'film-details/:id', component: FilmDetailsComponent },
+  { path: 'auditoriums', component: AuditoriumsComponent },
+  { path: 'auditorium-details/:id', component: AuditoriumDetailsComponent }
 ];
 
 @NgModule({

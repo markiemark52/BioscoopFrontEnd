@@ -22,7 +22,7 @@ export class HomeComponent implements OnInit {
         this.films.push(new Film().deserialize(film));
         console.log(film);
       });
-    })
+    });
 
     console.log(this.films);
   }

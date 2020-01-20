@@ -1,5 +1,5 @@
 import { Injectable, NgModule } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 
 import { NewFilm } from '../models/newfilm.model';
 import { NewUser } from '../models/newuser.model';
@@ -36,5 +36,32 @@ export class ApiService {
 
   public login(loginUser: LoginUser) {
     return this.httpClient.post<LoginUser>('http://localhost:9090/users/login', loginUser)
+  }
+
+  public getAuditoriums() {
+    return this.httpClient.get('http://localhost:9090/auditoriums/all');
+  }
+
+  public manage(filmTitle: string, auditoriumName: string, datetime: string) {
+    console.log("filmTitle="+filmTitle+"auditoriumName="+auditoriumName+"datetime"+datetime);
+    // return this.httpClient.get(`http://localhost:9090/auditoriums/manage?filmTitle=${filmTitle}?auditoriumName=${auditoriumName}?datetime=${datetime}`);
+    const params = new HttpParams().set("filmTitle", filmTitle).set("auditoriumName", auditoriumName).set("datetime", datetime);
+    return this.httpClient.get('http://localhost:9090/auditoriums/manage', {params});
+  }
+
+  public getFilmById(id: number) {
+    return this.httpClient.get(`http://localhost:9090/films/id?id=${id}`);
+  }
+
+  public getShowtimesByFilmId(filmId: number) {
+    return this.httpClient.get(`http://localhost:9090/auditoriums/showtimes?filmId=${filmId}`);
+  }
+
+  public getShowtimesByAuditoriumId(auditoriumId: number) {
+    return this.httpClient.get(`http://localhost:9090/auditoriums/ashowtimes?auditoriumId=${auditoriumId}`);
+  }
+
+  public getAuditoriumById(id: number) {
+    return this.httpClient.get(`http://localhost:9090/auditoriums/id?id=${id}`);
   }
 }

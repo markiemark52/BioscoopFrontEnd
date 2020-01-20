@@ -90,8 +90,13 @@ describe('LoginComponent', () => {
     expect(loginComponent.loginResponse.password == null).toBeTruthy();
   });
 
-  it('test', async() => {
-    const email = loginComponent.loginForm.value.email;
-    expect(email.valid).toBeFalsy();
-  })
+  it('form should be valid after being filled in properly', () => {
+    const emailControl = loginComponent.loginForm.controls['email'];
+    emailControl.setValue('admin');
+
+    const passwordControl = loginComponent.loginForm.controls['password'];
+    passwordControl.setValue('admin');
+
+    expect(loginComponent.loginForm.valid).toBeTruthy();
+  });
 });

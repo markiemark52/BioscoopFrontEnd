@@ -15,6 +15,13 @@ import { LogoutComponent } from './components/logout/logout.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { NavbarLoginComponent } from './components/navbar-login/navbar-login.component';
 import { NavbarLogoutComponent } from './components/navbar-logout/navbar-logout.component';
+import { ManageComponent } from './components/manage/manage.component';
+import { FilmDetailsComponent } from './components/film-details/film-details.component';
+import { ShowtimeComponent } from './components/showtime/showtime.component';
+import { AuditoriumDetailsComponent } from './components/auditorium-details/auditorium-details.component';
+import { AuditoriumComponent } from './components/auditorium/auditorium.component';
+import { AuditoriumsComponent } from './components/auditoriums/auditoriums.component';
+import { AshowtimeComponent } from './components/ashowtime/ashowtime.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +35,14 @@ import { NavbarLogoutComponent } from './components/navbar-logout/navbar-logout.
     LogoutComponent,
     ProfileComponent,
     NavbarLoginComponent,
-    NavbarLogoutComponent
+    NavbarLogoutComponent,
+    ManageComponent,
+    FilmDetailsComponent,
+    ShowtimeComponent,
+    AuditoriumDetailsComponent,
+    AuditoriumComponent,
+    AuditoriumsComponent,
+    AshowtimeComponent
   ],
   imports: [
     BrowserModule,
